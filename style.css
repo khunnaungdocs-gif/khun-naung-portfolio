@@ -1490,3 +1490,225 @@ transition:.5s;
 opacity:1;
 
 }
+/* ==========================
+   SCROLL PROGRESS BAR
+========================== */
+
+#progress-bar{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:0;
+
+height:4px;
+
+background:#C7A34B;
+
+z-index:999999;
+
+transition:width .15s linear;
+
+box-shadow:0 0 10px #C7A34B;
+
+}
+/* ==========================
+   PAGE TRANSITION
+========================== */
+
+#page-transition{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:#050505;
+
+transform:translateY(-100%);
+
+z-index:999998;
+
+transition:transform .7s ease;
+
+}
+
+#page-transition.active{
+
+transform:translateY(0);
+
+}
+/* ==========================
+   A24 HERO
+========================== */
+
+.hero-content{
+    overflow:hidden;
+}
+
+.hero-content h1,
+.hero-content h2,
+.hero-content p,
+.hero-content .btn{
+
+    opacity:0;
+    transform:translateY(80px);
+
+}
+.overlay{
+
+background:
+linear-gradient(
+180deg,
+rgba(0,0,0,.55),
+rgba(0,0,0,.78)
+);
+
+backdrop-filter:blur(2px);
+
+}
+.btn{
+
+background:transparent;
+
+border:1px solid #C7A34B;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+}
+
+.btn:hover{
+
+background:#C7A34B;
+
+color:black;
+
+}
+.grain{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+pointer-events:none;
+
+opacity:.05;
+
+z-index:999;
+
+background-image:url("assets/images/grain.png");
+
+animation:grain 8s steps(10) infinite;
+
+}
+
+@keyframes grain{
+
+0%{transform:translate(0,0);}
+25%{transform:translate(-5%,-10%);}
+50%{transform:translate(8%,4%);}
+75%{transform:translate(-3%,7%);}
+100%{transform:translate(0,0);}
+
+}
+/* ==========================
+   SHOWREEL POPUP
+========================== */
+
+#showreel-popup{
+
+position:fixed;
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+background:rgba(0,0,0,.92);
+
+backdrop-filter:blur(8px);
+
+z-index:999999;
+
+}
+
+.popup-content{
+
+width:90%;
+max-width:1100px;
+
+position:relative;
+
+animation:popup .5s ease;
+
+}
+
+.popup-content iframe{
+
+width:100%;
+aspect-ratio:16/9;
+
+border:none;
+
+border-radius:20px;
+
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+
+}
+
+.popup-close{
+
+position:absolute;
+
+top:-60px;
+right:0;
+
+font-size:50px;
+
+color:white;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.popup-close:hover{
+
+color:#C7A34B;
+
+}
+
+@keyframes popup{
+
+from{
+
+opacity:0;
+transform:scale(.8);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
